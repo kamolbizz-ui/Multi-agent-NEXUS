@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="th"><head><script data-bard-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjZjYTg2MDA3YjlmMTU0MmYyNDZlYjA0YmUwMzY0MWU2Njc3MTUzMTQiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwMzQxODE1Njc4NDE4Nzc3MTYwOCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiIyNjVkMmRkOGE0YTQtbXVsdGlfYWdlbnRfbmV4dXNfY29yZS5odG1sLTQwIn0sImV4cCI6MTc4MTYwMDg1MSwiaWF0IjoxNzgxNTk3MjUxLCJhbGciOiJSUzI1NiJ9.GQbXUeQ_xdOK5uhDztHQa1uVIL_1C6gOwBmklvjWUoANNVK2H9LVlODPqi71AewbwT1SqnKBk5NVlIjPfYeGpWIRm6cNYrVhXvJUOMlXuC9w98IEaYPCbbNm5xhSpkuTDcpPcgkAuoQRFo--zHSGWoOhWyTmhl1xPXMQnrDOoE5AZj2YJhWNLXLQKiF5kI_vcnORJwmVYBEJfphadf2Tm3O7x3cFhp_X6nFRUecxj9eteu9Y766hLTeew6W2QIQbWsubzgyXNlq-K8WMH-lBnnV-UOAIKcEMA-bUG7JOhteLbRY0T4Q_Ic1cdBXOEVO7uSSbAnNEia-qCXoDAqYpog","265d2dd8a4a4-multi_agent_nexus_core.html-40")</script><script data-bard-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
+</script><script data-bard-injected="true">(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script data-bard-injected="true">(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script data-bard-injected="true">
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script data-bard-injected="true">((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image"]})</script><script data-bard-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script data-bard-injected="true">(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Nexus Multi-Agent</title>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Marked.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" crossorigin="anonymous"></script>
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#000000',      /* True Black OLED */
+            brandSidebar: '#0a0a0a',   /* Dark OLED Gray */
+            brandSurface: '#171717',   /* Card Dark */
+            brandSurface2: '#262626',  /* Card Hover */
+            brandBorder: '#262626',    /* Borders */
+            accent: '#10a37f',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body { height: 100dvh; }
+    
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 99px; }
+
+    .fade-in { animation: fadeIn 0.2s ease-out forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+    .typing-dots span {
+      display: inline-block; width: 5px; height: 5px; background: #a1a1aa; border-radius: 50%;
+      margin: 0 2px; animation: bounce 1.0s infinite;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-5px); } }
+
+    .rendered-content p { margin-bottom: 0.75rem; }
+    .rendered-content p:last-child { margin-bottom: 0; }
+    .rendered-content ul, .rendered-content ol { margin-left: 1.25rem; margin-bottom: 0.75rem; }
+    .rendered-content ul { list-style-type: disc; }
+    .rendered-content ol { list-style-type: decimal; }
+    .rendered-content code { background: #262626; padding: 0.15rem 0.35rem; border-radius: 4px; font-family: monospace; font-size: 0.9em; color: #e4e4e7; }
+    .rendered-content pre { background: #000000; padding: 0.75rem; border-radius: 8px; border: 1px solid #262626; overflow-x: auto; margin: 0.75rem 0; }
+    .rendered-content pre code { background: transparent; padding: 0; color: #d4d4d8; }
+    .rendered-content h1, .rendered-content h2, .rendered-content h3 { font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #f4f4f5; }
+    .rendered-content h1 { font-size: 1.15em; }
+    .rendered-content h2 { font-size: 1.05em; }
+    .rendered-content h3 { font-size: 1em; }
+    .rendered-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9em; }
+    .rendered-content th, .rendered-content td { border: 1px solid #3f3f46; padding: 6px 12px; }
+    .rendered-content th { background: #18181b; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-top-8{top:-2rem}.left-0\.5{left:0.125rem}.right-0{right:0px}.top-0\.5{top:0.125rem}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.mb-2{margin-bottom:0.5rem}.ml-1{margin-left:0.25rem}.mt-1\.5{margin-top:0.375rem}.mt-3{margin-top:0.75rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:0.375rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-full{height:100%}.max-h-\[40dvh\]{max-height:40dvh}.max-h-\[60vh\]{max-height:60vh}.min-h-\[24px\]{min-height:24px}.w-1\.5{width:0.375rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-4{width:1rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.max-w-\[100px\]{max-width:100px}.max-w-\[280px\]{max-width:280px}.max-w-sm{max-width:24rem}.max-w-xs{max-width:20rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.translate-x-4{--tw-translate-x:1rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.scroll-smooth{scroll-behavior:smooth}.whitespace-pre-wrap{white-space:pre-wrap}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-none{border-style:none}.border-brandBorder{--tw-border-opacity:1;border-color:rgb(38 38 38 / var(--tw-border-opacity, 1))}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-emerald-600{--tw-border-opacity:1;border-color:rgb(5 150 105 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-brandDark{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-brandSidebar{--tw-bg-opacity:1;background-color:rgb(10 10 10 / var(--tw-bg-opacity, 1))}.bg-brandSurface{--tw-bg-opacity:1;background-color:rgb(23 23 23 / var(--tw-bg-opacity, 1))}.bg-brandSurface2{--tw-bg-opacity:1;background-color:rgb(38 38 38 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-purple-500{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-10{padding-bottom:2.5rem}.pb-2{padding-bottom:0.5rem}.pb-\[env\(safe-area-inset-bottom\2c 12px\)\]{padding-bottom:env(safe-area-inset-bottom,12px)}.pt-2{padding-top:0.5rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[9px\]{font-size:9px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-zinc-100{--tw-text-opacity:1;color:rgb(244 244 245 / var(--tw-text-opacity, 1))}.text-zinc-200{--tw-text-opacity:1;color:rgb(228 228 231 / var(--tw-text-opacity, 1))}.text-zinc-300{--tw-text-opacity:1;color:rgb(212 212 216 / var(--tw-text-opacity, 1))}.text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}.text-zinc-500{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity, 1))}.text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity, 1))}.placeholder-zinc-500::placeholder{--tw-placeholder-opacity:1;color:rgb(113 113 122 / var(--tw-placeholder-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-emerald-900\/50{--tw-shadow-color:rgb(6 78 59 / 0.5);--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.focus-within\:border-emerald-600:focus-within{--tw-border-opacity:1;border-color:rgb(5 150 105 / var(--tw-border-opacity, 1))}.focus-within\:bg-brandSurface2:focus-within{--tw-bg-opacity:1;background-color:rgb(38 38 38 / var(--tw-bg-opacity, 1))}.hover\:border-zinc-500:hover{--tw-border-opacity:1;border-color:rgb(113 113 122 / var(--tw-border-opacity, 1))}.hover\:bg-brandSurface2:hover{--tw-bg-opacity:1;background-color:rgb(38 38 38 / var(--tw-bg-opacity, 1))}.hover\:text-emerald-400:hover{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.hover\:text-red-400:hover{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-yellow-500:hover{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.hover\:text-zinc-300:hover{--tw-text-opacity:1;color:rgb(212 212 216 / var(--tw-text-opacity, 1))}.focus\:border-emerald-600:focus{--tw-border-opacity:1;border-color:rgb(5 150 105 / var(--tw-border-opacity, 1))}.disabled\:bg-brandBorder:disabled{--tw-bg-opacity:1;background-color:rgb(38 38 38 / var(--tw-bg-opacity, 1))}.disabled\:text-zinc-600:disabled{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity, 1))}</style></head>
+<body class="bg-brandDark text-zinc-200 flex flex-col overflow-hidden font-sans">
+
+  <!-- HEADER -->
+  <header class="flex items-center justify-between px-4 py-3 bg-brandSidebar border-b border-brandBorder shrink-0 z-40">
+    <div class="flex items-center gap-3">
+      <div class="w-7 h-7 bg-emerald-600 rounded-md flex items-center justify-center shadow-lg shadow-emerald-900/50 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+      </div>
+      <div>
+        <h1 class="font-semibold text-sm tracking-wide text-zinc-100">Nexus Core</h1>
+      </div>
+    </div>
+
+    <!-- Top Action Buttons -->
+    <div class="flex items-center gap-2">
+      <!-- Copy Chat -->
+      <button onclick="copyEntireChat()" class="p-1.5 rounded-lg bg-brandSurface hover:bg-brandSurface2 text-zinc-400 hover:text-emerald-400 border border-brandBorder transition-all" title="Copy Chat to Clipboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+      </button>
+      <!-- New Chat -->
+      <button onclick="startNewChat()" class="p-1.5 rounded-lg bg-brandSurface hover:bg-brandSurface2 text-zinc-400 hover:text-white border border-brandBorder transition-all" title="New Chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+      </button>
+      <!-- Active Agents Badge -->
+      <div onclick="switchPage('agents')" class="text-[10px] bg-brandSurface border border-brandBorder px-2.5 py-1.5 rounded-md text-zinc-400 cursor-pointer hover:bg-brandSurface2 transition-all flex items-center gap-1.5 font-medium ml-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span id="activeCount">3</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION TABS -->
+  <nav class="flex bg-brandSidebar border-b border-brandBorder shrink-0 overflow-x-auto scrollbar-none z-30">
+    <button onclick="switchPage('chat')" id="nav-chat" class="flex-1 py-3 flex flex-col items-center justify-center gap-1 text-[10px] font-medium border-b-2 transition-all outline-none text-zinc-500 border-transparent">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path></svg>
+      <span>Chat</span>
+    </button>
+    <button onclick="switchPage('history')" id="nav-history" class="flex-1 py-3 flex flex-col items-center justify-center gap-1 text-[10px] font-medium text-zinc-500 border-b-2 border-transparent transition-all outline-none hover:text-zinc-300">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <span>History</span>
+    </button>
+    <button onclick="switchPage('agents')" id="nav-agents" class="flex-1 py-3 flex flex-col items-center justify-center gap-1 text-[10px] font-medium text-zinc-500 border-b-2 border-transparent transition-all outline-none hover:text-zinc-300">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+      <span>Agents</span>
+    </button>
+    <button onclick="switchPage('settings')" id="nav-settings" class="flex-1 py-3 flex flex-col items-center justify-center gap-1 text-[10px] font-medium border-b-2 transition-all outline-none hover:text-zinc-300 text-emerald-500 border-emerald-500">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+      <span>Settings</span>
+    </button>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 overflow-hidden flex flex-col relative bg-brandDark">
+
+    <!-- PAGE 1: CHAT -->
+    <div id="page-chat" class="page active flex-1 flex flex-col overflow-hidden hidden">
+      <!-- Conversation feed -->
+      <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-5 scroll-smooth relative pb-10">
+        <!-- Landing Banner -->
+        <div id="emptyState" class="flex flex-col items-center justify-center text-center py-10 px-4 h-full space-y-4 fade-in">
+          <div class="w-16 h-16 rounded-2xl bg-brandSurface flex items-center justify-center border border-brandBorder mb-2 text-zinc-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+          </div>
+          <h2 class="text-lg font-semibold tracking-wide text-zinc-200">System Ready</h2>
+          <p class="text-[11px] text-zinc-500 leading-relaxed max-w-xs">
+            สืบค้นและประมวลผลข้อมูลผ่าน AI หลายโมเดลพร้อมกัน (Parallel, Judge, Chain) รวมถึงโหมดใหม่ <span class="text-emerald-500 font-bold">Free Agent</span> ที่จดจำบริบทแชทต่อเนื่องได้
+          </p>
+          <div class="w-full pt-4 max-w-sm">
+            <div class="grid grid-cols-1 gap-2 p-1">
+              <button onclick="setSuggestion(this)" class="bg-brandSurface border border-brandBorder hover:border-zinc-500 text-xs text-left p-3 rounded-xl text-zinc-400 transition-colors">สรุปทฤษฎีสัมพัทธภาพพิเศษของไอน์สไตน์</button>
+              <button onclick="setSuggestion(this)" class="bg-brandSurface border border-brandBorder hover:border-zinc-500 text-xs text-left p-3 rounded-xl text-zinc-400 transition-colors">เปรียบเทียบข้อดี Gemini vs Groq vs GPT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="p-3 bg-brandSidebar border-t border-brandBorder shrink-0 pb-[env(safe-area-inset-bottom,12px)] flex flex-col gap-2 relative">
+        
+        <!-- Pipeline modes selector -->
+        <div class="flex gap-2 overflow-x-auto scrollbar-none w-full">
+          <button onclick="setMode('parallel', this)" class="mode-chip active px-3 py-1.5 rounded-md text-[10px] font-semibold bg-emerald-600 text-white border border-emerald-600 shrink-0 flex items-center gap-1.5 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"></path><path d="M21 3 9 15"></path><path d="M21 16v5h-5"></path><path d="M21 21 15 15"></path><path d="M3 3l6 6"></path><path d="M3 21l6-6"></path></svg>
+            Parallel
+          </button>
+          <button onclick="setMode('judge', this)" class="mode-chip px-3 py-1.5 rounded-md text-[10px] font-semibold bg-brandSurface text-zinc-400 border border-brandBorder shrink-0 flex items-center gap-1.5 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg>
+            Judge
+          </button>
+          <button onclick="setMode('chain', this)" class="mode-chip px-3 py-1.5 rounded-md text-[10px] font-semibold bg-brandSurface text-zinc-400 border border-brandBorder shrink-0 flex items-center gap-1.5 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            Chain
+          </button>
+          <!-- NEW: Free Agent Mode -->
+          <button onclick="setMode('free', this)" class="mode-chip px-3 py-1.5 rounded-md text-[10px] font-semibold bg-brandSurface text-zinc-400 border border-brandBorder shrink-0 flex items-center gap-1.5 transition-colors" title="โหมดสนทนาต่อเนื่อง เลือก Agent เองได้">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg>
+            Free Agent
+          </button>
+        </div>
+
+        <!-- Text area and buttons wrapper -->
+        <div class="flex items-end gap-2 bg-brandSurface border border-brandBorder rounded-xl p-2 relative focus-within:border-emerald-600 focus-within:bg-brandSurface2 transition-colors">
+          
+          <button id="hideKbBtn" onclick="dismissKeyboard()" class="hidden absolute -top-8 right-0 bg-brandSurface border border-brandBorder text-zinc-400 hover:text-white p-1.5 rounded-lg shadow-lg z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+
+          <!-- Dropdown for Free Agent Selection (Hidden by default) -->
+          <select id="freeAgentSelect" class="hidden shrink-0 bg-brandDark border border-brandBorder rounded-lg px-2 py-1.5 text-xs text-emerald-400 outline-none font-bold max-w-[100px]">
+            <option value="1">Agent 1</option>
+            <option value="2">Agent 2</option>
+            <option value="3">Agent 3</option>
+          </select>
+
+          <textarea id="promptInput" placeholder="Message Core..." rows="1" oninput="autoResize(this)" onfocus="handleFocus()" onblur="handleBlur()" onkeydown="handleKey(event)" class="flex-1 bg-transparent border-none outline-none text-zinc-100 placeholder-zinc-500 text-sm resize-none max-h-[40dvh] min-h-[24px] py-1 px-1.5 leading-relaxed scrollbar-none"></textarea>
+          
+          <button id="sendBtn" onclick="sendMessage()" disabled="" class="w-8 h-8 rounded-lg bg-emerald-600 disabled:bg-brandBorder disabled:text-zinc-600 text-white flex items-center justify-center transition-colors shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: HISTORY LOG -->
+    <div id="page-history" class="page hidden flex-1 flex flex-col overflow-hidden">
+      <div class="flex-1 overflow-y-auto p-4 space-y-4">
+        <div class="flex items-center justify-between border-b border-brandBorder pb-2">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-500">History Records</span>
+          <button onclick="triggerClearAllHistory()" class="text-xs font-semibold text-red-500 hover:text-red-400">
+            Clear All
+          </button>
+        </div>
+        <div id="historyList" class="space-y-2"><div class="text-center py-6 text-xs text-zinc-600">No history</div></div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: AGENTS CONFIG -->
+    <div id="page-agents" class="page hidden flex-1 flex flex-col overflow-hidden">
+      <div class="flex-1 overflow-y-auto p-4 space-y-4">
+        
+        <div class="bg-brandSurface border border-brandBorder rounded-xl overflow-hidden">
+          <div class="p-3 border-b border-brandBorder flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+              <span class="font-semibold text-sm">Agent 1 (Gemini)</span>
+            </div>
+            <div onclick="toggleAgent(1)" id="t1" class="toggle-switch on w-9 h-5 rounded-full bg-emerald-600 cursor-pointer relative transition-all">
+              <div class="absolute w-4 h-4 bg-white rounded-full top-0.5 left-0.5 transition-transform translate-x-4"></div>
+            </div>
+          </div>
+          <div class="p-3">
+            <textarea id="sys1" rows="2" oninput="saveAgents()" placeholder="System prompt..." class="w-full bg-brandDark border border-brandBorder rounded-lg p-2 text-xs text-zinc-300 outline-none focus:border-emerald-600"></textarea>
+          </div>
+        </div>
+
+        <div class="bg-brandSurface border border-brandBorder rounded-xl overflow-hidden">
+          <div class="p-3 border-b border-brandBorder flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+              <span class="font-semibold text-sm">Agent 2 (Groq)</span>
+            </div>
+            <div onclick="toggleAgent(2)" id="t2" class="toggle-switch on w-9 h-5 rounded-full bg-emerald-600 cursor-pointer relative transition-all">
+              <div class="absolute w-4 h-4 bg-white rounded-full top-0.5 left-0.5 transition-transform translate-x-4"></div>
+            </div>
+          </div>
+          <div class="p-3">
+            <textarea id="sys2" rows="2" oninput="saveAgents()" placeholder="System prompt..." class="w-full bg-brandDark border border-brandBorder rounded-lg p-2 text-xs text-zinc-300 outline-none focus:border-emerald-600"></textarea>
+          </div>
+        </div>
+
+        <div class="bg-brandSurface border border-brandBorder rounded-xl overflow-hidden">
+          <div class="p-3 border-b border-brandBorder flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+              <span class="font-semibold text-sm">Agent 3 (OpenRouter)</span>
+            </div>
+            <div onclick="toggleAgent(3)" id="t3" class="toggle-switch on w-9 h-5 rounded-full bg-emerald-600 cursor-pointer relative transition-all">
+              <div class="absolute w-4 h-4 bg-white rounded-full top-0.5 left-0.5 transition-transform translate-x-4"></div>
+            </div>
+          </div>
+          <div class="p-3">
+            <textarea id="sys3" rows="2" oninput="saveAgents()" placeholder="System prompt..." class="w-full bg-brandDark border border-brandBorder rounded-lg p-2 text-xs text-zinc-300 outline-none focus:border-emerald-600"></textarea>
+          </div>
+        </div>
+
+        <div class="bg-brandSurface border border-brandBorder rounded-xl overflow-hidden">
+          <div class="p-3 border-b border-brandBorder flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span class="font-semibold text-sm">Judge Core (For Judge Mode)</span>
+          </div>
+          <div class="p-3">
+            <textarea id="sysJudge" rows="3" oninput="saveAgents()" class="w-full bg-brandDark border border-brandBorder rounded-lg p-2 text-xs text-zinc-300 outline-none focus:border-emerald-600"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 4: SETTINGS -->
+    <div id="page-settings" class="page flex-1 flex flex-col overflow-hidden">
+      <div class="flex-1 overflow-y-auto p-4 space-y-5">
+        
+        <!-- Gemini Settings -->
+        <div>
+          <h3 class="text-[10px] font-bold uppercase tracking-wider text-zinc-500 mb-2">Google Gemini</h3>
+          <div class="bg-brandSurface border border-brandBorder rounded-xl p-3 space-y-3">
+            <div>
+              <input type="password" id="keyGemini" oninput="debouncedSaveKeys('gemini')" placeholder="API Key..." class="w-full bg-brandDark border border-brandBorder rounded-lg px-3 py-2 text-xs text-zinc-200 outline-none focus:border-emerald-600">
+              <div class="flex items-center gap-1.5 mt-1.5 text-[9px] text-zinc-500"><span id="dGem" class="w-2 h-2 rounded-full bg-red-500"></span><span id="lGem">No Key</span></div>
+            </div>
+            <!-- Global Context -->
+            <textarea id="ctxGemini" rows="1" oninput="saveKeys()" placeholder="Global Platform Context (Optional)..." class="w-full bg-brandDark border border-brandBorder rounded-lg px-3 py-2 text-xs text-zinc-400 outline-none focus:border-emerald-600"></textarea>
+            
+            <div class="flex items-center gap-2">
+              <select id="modelGem" onchange="saveKeys()" class="flex-1 bg-brandDark border border-brandBorder rounded-lg px-2 py-1.5 text-xs text-zinc-200 outline-none"><optgroup label="All Models"><option value="gemini-2.5-flash">Gemini 2.5 Flash</option><option value="gemini-1.5-pro">Gemini 1.5 Pro</option></optgroup></select>
+              <button onclick="toggleFavorite('gemini', 'modelGem')" class="p-1.5 rounded-lg bg-brandDark border border-brandBorder text-zinc-400 hover:text-yellow-500" title="Favorite this Model">⭐</button>
+            </div>
+            <select id="judgeModelGem" onchange="saveKeys()" class="w-full bg-brandDark border border-brandBorder rounded-lg px-2 py-1.5 text-xs text-zinc-200 outline-none"><optgroup label="All Models"><option value="gemini-2.5-flash">Gemini 2.5 Flash</option><option value="gemini-1.5-pro">Gemini 1.5 Pro</option></optgroup></select>
+          </div>
+        </div>
+
+        <!-- Groq Settings -->
+        <div>
+          <h3 class="text-[10px] font-bold uppercase tracking-wider text-zinc-500 mb-2">Groq</h3>
+          <div class="bg-brandSurface border border-brandBorder rounded-xl p-3 space-y-3">
+            <div>
+              <input type="password" id="keyGroq" oninput="debouncedSaveKeys('groq')" placeholder="API Key..." class="w-full bg-brandDark border border-brandBorder rounded-lg px-3 py-2 text-xs text-zinc-200 outline-none focus:border-emerald-600">
+              <div class="flex items-center gap-1.5 mt-1.5 text-[9px] text-zinc-500"><span id="dGroq" class="w-2 h-2 rounded-full bg-red-500"></span><span id="lGroq">No Key</span></div>
+            </div>
+            <textarea id="ctxGroq" rows="1" oninput="saveKeys()" placeholder="Global Platform Context (Optional)..." class="w-full bg-brandDark border border-brandBorder rounded-lg px-3 py-2 text-xs text-zinc-400 outline-none focus:border-emerald-600"></textarea>
+            
+            <div class="flex items-center gap-2">
+              <select id="modelGroq" onchange="saveKeys()" class="flex-1 bg-brandDark border border-brandBorder rounded-lg px-2 py-1.5 text-xs text-zinc-200 outline-none"><optgroup label="All Models"><option value="llama-3.3-70b-versatile">Llama 3.3 70B</option><option value="mixtral-8x7b-32768">Mixtral 8x7B</option></optgroup></select>
+              <button onclick="toggleFavorite('groq', 'modelGroq')" class="p-1.5 rounded-lg bg-brandDark border border-brandBorder text-zinc-400 hover:text-yellow-500" title="Favorite this Model">⭐</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- OpenRouter Settings -->
+        <div>
+          <h3 class="text-[10px] font-bold uppercase tracking-wider text-zinc-500 mb-2">OpenRouter</h3>
+          <div class="bg-brandSurface border border-brandBorder rounded-xl p-3 space-y-3">
+            <div>
+              <input type="password" id="keyOR" oninput="debouncedSaveKeys('openrouter')" placeholder="API Key..." class="w-full bg-brandDark border border-brandBorder rounded-lg px-3 py-2 text-xs text-zinc-200 outline-none focus:border-emerald-600">
+              <div class="flex items-center gap-1.5 mt-1.5 text-[9px] text-zinc-500"><span id="dOR" class="w-2 h-2 rounded-full bg-red-500"></span><span id="lOR">No Key</span></div>
+            </div>
+            <textarea id="ctxOR" rows="1" oninput="saveKeys()" placeholder="Global Platform Context (Optional)..." class="w-full bg-brandDark border border-brandBorder rounded-lg px-3 py-2 text-xs text-zinc-400 outline-none focus:border-emerald-600"></textarea>
+            
+            <div class="flex items-center gap-2">
+              <select id="modelOR" onchange="saveKeys()" class="flex-1 bg-brandDark border border-brandBorder rounded-lg px-2 py-1.5 text-xs text-zinc-200 outline-none"><optgroup label="All Models"><option value="google/gemini-2.5-flash:free">Gemini 2.5 Flash (Free)</option><option value="meta-llama/llama-3.3-70b-instruct:free">Llama 3.3 70B (Free)</option></optgroup></select>
+              <button onclick="toggleFavorite('openrouter', 'modelOR')" class="p-1.5 rounded-lg bg-brandDark border border-brandBorder text-zinc-400 hover:text-yellow-500" title="Favorite this Model">⭐</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Export Data -->
+        <div class="pt-2">
+          <button onclick="downloadSelf()" class="w-full bg-brandSurface border border-brandBorder hover:bg-brandSurface2 text-zinc-300 text-xs font-semibold py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Export App (HTML)
+          </button>
+          <div id="corsEngineStatus" class="text-[10px] text-zinc-600 text-center mt-3">Web Browser Sandbox</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- CUSTOM MODAL -->
+  <div id="customModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+    <div class="bg-brandSurface border border-brandBorder rounded-2xl p-5 max-w-[280px] w-full space-y-3 shadow-2xl fade-in text-center">
+      <h3 id="modalTitle" class="text-sm font-semibold text-white">Alert</h3>
+      <p id="modalMsg" class="text-xs text-zinc-400 max-h-[60vh] overflow-y-auto whitespace-pre-wrap text-left"></p>
+      <div id="modalActionContainer" class="flex items-center justify-center gap-2 pt-2">
+        <button id="modalBtnOk" onclick="closeModal(true)" class="flex-1 bg-emerald-600 text-white text-xs font-semibold py-2 rounded-lg">OK</button>
+        <button id="modalBtnCancel" onclick="closeModal(false)" class="flex-1 bg-brandSurface2 border border-brandBorder text-zinc-300 text-xs font-semibold py-2 rounded-lg hidden">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // System Config
+    const FALLBACK_MODELS = {
+      gemini: [ { value: 'gemini-2.5-flash', text: 'Gemini 2.5 Flash' }, { value: 'gemini-1.5-pro', text: 'Gemini 1.5 Pro' } ],
+      groq: [ { value: 'llama-3.3-70b-versatile', text: 'Llama 3.3 70B' }, { value: 'mixtral-8x7b-32768', text: 'Mixtral 8x7B' } ],
+      openrouter: [ { value: 'google/gemini-2.5-flash:free', text: 'Gemini 2.5 Flash (Free)' }, { value: 'meta-llama/llama-3.3-70b-instruct:free', text: 'Llama 3.3 70B (Free)' } ]
+    };
+
+    let currentMode = 'parallel';
+    // Chat Context Data for Free Agent continuous conversation
+    let currentChatContext = []; 
+
+    let agentsState = {
+      1: { active: true, sysPrompt: 'ตอบเป็นทางการ เป็นภาษาไทย' },
+      2: { active: true, sysPrompt: 'ตอบแบบวิจารณ์ เปรียบเทียบ รวบรัด' },
+      3: { active: true, sysPrompt: 'ให้คำแนะนำเชิงปฏิบัติ' },
+      judge: { sysPrompt: 'สรุปเปรียบเทียบคำตอบ 1. เห็นพ้อง 2. แตกต่าง 3. สรุป' }
+    };
+
+    let apiKeys = { 
+      gemini: '', groq: '', openrouter: '', 
+      modelGem: '', judgeModelGem: '', modelGroq: '', modelOR: '',
+      ctxGemini: '', ctxGroq: '', ctxOR: '',
+      fav_gemini: [], fav_groq: [], fav_openrouter: []
+    };
+    
+    // Cached Live Models Arrays
+    let liveModelsData = { gemini: [], groq: [], openrouter: [] };
+    
+    let chatHistory = [];
+    let isCapacitorActive = false;
+    let modalCallback = null;
+    let debounceTimer = null;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      checkNetworkEngine();
+      loadDataFromStorage();
+      initDefaultDropdowns();
+      
+      if (apiKeys.gemini) triggerModelSync('gemini');
+      if (apiKeys.groq) triggerModelSync('groq');
+      if (apiKeys.openrouter) triggerModelSync('openrouter');
+      
+      updateActiveCount();
+      renderHistoryList();
+      marked.setOptions({ breaks: true, gfm: true });
+    });
+
+    // --- Input & Mobile Keyboard Handling ---
+    function autoResize(el) {
+      el.style.height = 'auto'; el.style.height = el.scrollHeight + 'px';
+      validateInput(el);
+      const chatCont = document.getElementById('chatMessages'); chatCont.scrollTop = chatCont.scrollHeight;
+    }
+    function handleFocus() {
+      document.getElementById('hideKbBtn').classList.remove('hidden');
+      setTimeout(() => { const c = document.getElementById('chatMessages'); c.scrollTop = c.scrollHeight; }, 300);
+    }
+    function handleBlur() { document.getElementById('hideKbBtn').classList.add('hidden'); }
+    function dismissKeyboard() { document.getElementById('promptInput').blur(); }
+    
+    // --- New Chat & Copy Chat ---
+    function startNewChat() {
+      document.getElementById('chatMessages').innerHTML = `
+        <div id="emptyState" class="flex flex-col items-center justify-center text-center py-10 px-4 h-full space-y-4 fade-in">
+          <div class="w-16 h-16 rounded-2xl bg-brandSurface flex items-center justify-center border border-brandBorder mb-2 text-zinc-500">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          </div>
+          <h2 class="text-lg font-semibold tracking-wide text-zinc-200">New Session Started</h2>
+          <p class="text-[11px] text-zinc-500 max-w-xs">ความจำการสนทนาก่อนหน้าถูกล้างเรียบร้อยแล้ว (ไม่กระทบประวัติถาวร)</p>
+        </div>
+      `;
+      currentChatContext = [];
+    }
+
+    function copyEntireChat() {
+      if(currentChatContext.length === 0) {
+        showCustomModal("Alert", "ยังไม่มีบทสนทนาในรอบปัจจุบันให้คัดลอกค่ะ");
+        return;
+      }
+      let transcript = "--- Chat Transcript ---\n\n";
+      currentChatContext.forEach(msg => {
+        if(msg.role === 'user') transcript += `🧑 User: ${msg.content}\n\n`;
+        else transcript += `🤖 ${msg.agentName}: ${msg.content}\n\n`;
+      });
+      secureCopyText(transcript);
+    }
+
+    // --- System UI ---
+    function checkNetworkEngine() {
+      const statusEl = document.getElementById('corsEngineStatus');
+      if (window.Capacitor?.Plugins?.Http) {
+        isCapacitorActive = true; statusEl.innerHTML = `Native HTTP Enabled (CORS Bypassed)`;
+      } else {
+        isCapacitorActive = false; statusEl.innerHTML = `Web Browser Sandbox`;
+      }
+    }
+
+    function showCustomModal(title, msg, type = 'alert', callback = null) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalMsg').textContent = msg;
+      if (type === 'confirm') document.getElementById('modalBtnCancel').classList.remove('hidden');
+      else document.getElementById('modalBtnCancel').classList.add('hidden');
+      modalCallback = callback;
+      document.getElementById('customModal').classList.remove('hidden');
+    }
+    function closeModal(result) { document.getElementById('customModal').classList.add('hidden'); if(modalCallback) { modalCallback(result); modalCallback=null; } }
+    
+    function downloadSelf() {
+      const docClone = document.documentElement.cloneNode(true);
+      const blob = new Blob(["<!DOCTYPE html>\n" + docClone.outerHTML], { type: 'text/html;charset=utf-8;' });
+      const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'nexus_core_app.html';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+    }
+
+    // --- Dropdowns & Favorites Engine ---
+    function initDefaultDropdowns() {
+      liveModelsData.gemini = FALLBACK_MODELS.gemini;
+      liveModelsData.groq = FALLBACK_MODELS.groq;
+      liveModelsData.openrouter = FALLBACK_MODELS.openrouter;
+      
+      renderSelectElement(document.getElementById('modelGem'), liveModelsData.gemini, apiKeys.modelGem, 'gemini');
+      renderSelectElement(document.getElementById('judgeModelGem'), liveModelsData.gemini, apiKeys.judgeModelGem, 'gemini');
+      renderSelectElement(document.getElementById('modelGroq'), liveModelsData.groq, apiKeys.modelGroq, 'groq');
+      renderSelectElement(document.getElementById('modelOR'), liveModelsData.openrouter, apiKeys.modelOR, 'openrouter');
+    }
+
+    function renderSelectElement(selectEl, modelsArray, selectedValue, platform) {
+      selectEl.innerHTML = '';
+      if(!modelsArray || modelsArray.length === 0) return;
+      
+      const favs = apiKeys[`fav_${platform}`] || [];
+      const favModels = modelsArray.filter(m => favs.includes(m.value));
+      const otherModels = modelsArray.filter(m => !favs.includes(m.value));
+
+      if(favModels.length > 0) {
+        const ogFav = document.createElement('optgroup');
+        ogFav.label = "⭐ Favorites";
+        favModels.forEach(m => {
+          const opt = document.createElement('option'); opt.value = m.value; opt.textContent = "⭐ " + m.text;
+          if(m.value === selectedValue) opt.selected = true; ogFav.appendChild(opt);
+        });
+        selectEl.appendChild(ogFav);
+      }
+
+      const ogAll = document.createElement('optgroup');
+      ogAll.label = "All Models";
+      otherModels.forEach(m => {
+        const opt = document.createElement('option'); opt.value = m.value; opt.textContent = m.text;
+        if(m.value === selectedValue) opt.selected = true; ogAll.appendChild(opt);
+      });
+      selectEl.appendChild(ogAll);
+    }
+
+    function toggleFavorite(platform, selectId) {
+      const sel = document.getElementById(selectId);
+      const val = sel.value;
+      if(!val) return;
+      
+      let favList = apiKeys[`fav_${platform}`] || [];
+      if(favList.includes(val)) {
+        favList = favList.filter(f => f !== val); // Unpin
+      } else {
+        favList.push(val); // Pin
+      }
+      apiKeys[`fav_${platform}`] = favList;
+      saveKeys(); // Save to localstorage
+      
+      // Re-render
+      if(platform === 'gemini') {
+        renderSelectElement(document.getElementById('modelGem'), liveModelsData.gemini, apiKeys.modelGem, 'gemini');
+        renderSelectElement(document.getElementById('judgeModelGem'), liveModelsData.gemini, apiKeys.judgeModelGem, 'gemini');
+      } else if (platform === 'groq') {
+        renderSelectElement(document.getElementById('modelGroq'), liveModelsData.groq, apiKeys.modelGroq, 'groq');
+      } else if (platform === 'openrouter') {
+        renderSelectElement(document.getElementById('modelOR'), liveModelsData.openrouter, apiKeys.modelOR, 'openrouter');
+      }
+    }
+
+    // --- Settings & Saving ---
+    function debouncedSaveKeys(platform) {
+      clearTimeout(debounceTimer);
+      updateIndicatorStatus(platform, 'loading', 'Syncing...');
+      debounceTimer = setTimeout(() => { saveKeys(); triggerModelSync(platform); }, 800);
+    }
+
+    function updateIndicatorStatus(platform, status, msg) {
+      const dict = { gemini: ['dGem','lGem'], groq: ['dGroq','lGroq'], openrouter: ['dOR','lOR'] };
+      const dot = document.getElementById(dict[platform][0]); const lbl = document.getElementById(dict[platform][1]);
+      if (!dot) return;
+      lbl.textContent = msg;
+      if (status === 'loading') dot.className = "w-2 h-2 rounded-full bg-amber-500 animate-pulse";
+      else if (status === 'success') dot.className = "w-2 h-2 rounded-full bg-emerald-500";
+      else dot.className = "w-2 h-2 rounded-full bg-red-500";
+    }
+
+    async function triggerModelSync(platform) {
+      const key = apiKeys[platform];
+      if (!key) {
+        updateIndicatorStatus(platform, 'none', 'No Key'); initDefaultDropdowns(); return;
+      }
+      setDropdownLoadingState(platform);
+      let url, headers = { "Content-Type": "application/json" };
+      if (platform === 'gemini') url = `https://generativelanguage.googleapis.com/v1beta/models?key=${key}`;
+      else if (platform === 'groq') { url = 'https://api.groq.com/openai/v1/models'; headers["Authorization"] = `Bearer ${key}`; }
+      else if (platform === 'openrouter') { url = 'https://openrouter.ai/api/v1/models'; headers["Authorization"] = `Bearer ${key}`; }
+
+      try {
+        let resData;
+        if (isCapacitorActive) {
+          const res = await window.Capacitor.Plugins.Http.request({ url, headers, method: 'GET' });
+          resData = typeof res.data === 'string' ? JSON.parse(res.data) : res.data;
+        } else {
+          const res = await fetch(url, { method: 'GET', headers });
+          if (!res.ok) throw new Error("HTTP " + res.status); resData = await res.json();
+        }
+
+        const models = resData.models || resData.data || [];
+        if (!models.length) throw new Error("Empty models");
+
+        if (platform === 'gemini') {
+          liveModelsData.gemini = models.map(m => ({ value: m.name.replace('models/',''), text: m.displayName || m.name }));
+          renderSelectElement(document.getElementById('modelGem'), liveModelsData.gemini, apiKeys.modelGem, 'gemini');
+          renderSelectElement(document.getElementById('judgeModelGem'), liveModelsData.gemini, apiKeys.judgeModelGem, 'gemini');
+        } else if (platform === 'groq') {
+          liveModelsData.groq = models.map(m => ({ value: m.id, text: m.id }));
+          renderSelectElement(document.getElementById('modelGroq'), liveModelsData.groq, apiKeys.modelGroq, 'groq');
+        } else if (platform === 'openrouter') {
+          liveModelsData.openrouter = models.map(m => ({ value: m.id, text: m.name || m.id }));
+          renderSelectElement(document.getElementById('modelOR'), liveModelsData.openrouter, apiKeys.modelOR, 'openrouter');
+        }
+        updateIndicatorStatus(platform, 'success', 'Connected'); saveKeys();
+      } catch (e) {
+        updateIndicatorStatus(platform, 'error', 'Error');
+        if (platform === 'gemini') {
+          renderSelectElement(document.getElementById('modelGem'), FALLBACK_MODELS.gemini, apiKeys.modelGem, 'gemini');
+          renderSelectElement(document.getElementById('judgeModelGem'), FALLBACK_MODELS.gemini, apiKeys.judgeModelGem, 'gemini');
+        } else if (platform === 'groq') {
+          renderSelectElement(document.getElementById('modelGroq'), FALLBACK_MODELS.groq, apiKeys.modelGroq, 'groq');
+        } else if (platform === 'openrouter') {
+          renderSelectElement(document.getElementById('modelOR'), FALLBACK_MODELS.openrouter, apiKeys.modelOR, 'openrouter');
+        }
+      }
+    }
+
+    function setDropdownLoadingState(platform) {
+      const loadingOpt = [{ value: '', text: 'Loading...' }];
+      if (platform === 'gemini') {
+        renderSelectElement(document.getElementById('modelGem'), loadingOpt, '', 'gemini');
+        renderSelectElement(document.getElementById('judgeModelGem'), loadingOpt, '', 'gemini');
+      } else if (platform === 'groq') renderSelectElement(document.getElementById('modelGroq'), loadingOpt, '', 'groq');
+      else if (platform === 'openrouter') renderSelectElement(document.getElementById('modelOR'), loadingOpt, '', 'openrouter');
+    }
+
+    function loadDataFromStorage() {
+      try {
+        const sk = localStorage.getItem('nexus_api_keys');
+        if (sk) {
+          apiKeys = JSON.parse(sk);
+          document.getElementById('keyGemini').value = apiKeys.gemini || '';
+          document.getElementById('keyGroq').value = apiKeys.groq || '';
+          document.getElementById('keyOR').value = apiKeys.openrouter || '';
+          document.getElementById('ctxGemini').value = apiKeys.ctxGemini || '';
+          document.getElementById('ctxGroq').value = apiKeys.ctxGroq || '';
+          document.getElementById('ctxOR').value = apiKeys.ctxOR || '';
+        }
+        const sa = localStorage.getItem('nexus_agents_state');
+        if (sa) {
+          agentsState = JSON.parse(sa);
+          for(let i=1; i<=3; i++) {
+            const t = document.getElementById(`t${i}`);
+            if(agentsState[i].active) t.classList.add('bg-emerald-600');
+            else { t.classList.remove('bg-emerald-600'); t.classList.add('bg-brandSurface2'); t.children[0].classList.remove('translate-x-4'); }
+            document.getElementById(`sys${i}`).value = agentsState[i].sysPrompt || '';
+          }
+          if(agentsState.judge) document.getElementById(`sysJudge`).value = agentsState.judge.sysPrompt || '';
+        }
+        const sh = localStorage.getItem('nexus_chat_history'); if(sh) chatHistory = JSON.parse(sh);
+        validateInput(document.getElementById('promptInput'));
+      } catch(e) {}
+    }
+
+    function saveKeys() {
+      apiKeys.gemini = document.getElementById('keyGemini').value.trim();
+      apiKeys.groq = document.getElementById('keyGroq').value.trim();
+      apiKeys.openrouter = document.getElementById('keyOR').value.trim();
+      
+      apiKeys.ctxGemini = document.getElementById('ctxGemini').value;
+      apiKeys.ctxGroq = document.getElementById('ctxGroq').value;
+      apiKeys.ctxOR = document.getElementById('ctxOR').value;
+
+      apiKeys.modelGem = document.getElementById('modelGem').value;
+      apiKeys.judgeModelGem = document.getElementById('judgeModelGem').value;
+      apiKeys.modelGroq = document.getElementById('modelGroq').value;
+      apiKeys.modelOR = document.getElementById('modelOR').value;
+      
+      localStorage.setItem('nexus_api_keys', JSON.stringify(apiKeys));
+      validateInput(document.getElementById('promptInput'));
+    }
+
+    function saveAgents() {
+      for(let i=1; i<=3; i++) agentsState[i].sysPrompt = document.getElementById(`sys${i}`).value;
+      agentsState.judge.sysPrompt = document.getElementById(`sysJudge`).value;
+      localStorage.setItem('nexus_agents_state', JSON.stringify(agentsState));
+    }
+
+    function secureCopyText(txt) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(txt).then(()=>showCustomModal("Copied", "คัดลอกสำเร็จแล้ว")).catch(()=>fallbackCopy(txt));
+      } else fallbackCopy(txt);
+    }
+    function fallbackCopy(txt) {
+      const ta = document.createElement("textarea"); ta.value = txt; ta.style.position="fixed"; ta.style.left="-9999px"; 
+      document.body.appendChild(ta); ta.focus(); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+      showCustomModal("Copied", "คัดลอกสำเร็จแล้ว");
+    }
+
+    async function requestAPI(url, headers, method, body) {
+      if (isCapacitorActive) {
+        const res = await window.Capacitor.Plugins.Http.request({ url, headers, method, data: body?JSON.parse(body):null });
+        return { ok: res.status >= 200 && res.status < 300, json: async()=>typeof res.data==='string'?JSON.parse(res.data):res.data };
+      } else return await fetch(url, { method, headers, body });
+    }
+
+    function compressContext(txt) {
+      if(!txt || txt.length < 500) return txt; const arr = txt.split(/[。\n.!?]+/); if(arr.length <= 8) return txt;
+      return "[Compressed]: " + arr[0] + ". " + arr.filter(s=>s.includes("สรุป")||s.length>100).join(". ") + ". " + arr[arr.length-1];
+    }
+
+    function switchPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('nav button').forEach(b => {
+        b.classList.remove('text-emerald-500', 'border-emerald-500'); b.classList.add('text-zinc-500', 'border-transparent');
+      });
+      document.getElementById(`page-${pageId}`).classList.remove('hidden');
+      const n = document.getElementById(`nav-${pageId}`);
+      n.classList.remove('text-zinc-500', 'border-transparent'); n.classList.add('text-emerald-500', 'border-emerald-500');
+    }
+
+    function validateInput(el) {
+      const btn = document.getElementById('sendBtn');
+      btn.disabled = !(el.value.trim() && (apiKeys.gemini || apiKeys.groq || apiKeys.openrouter));
+    }
+
+    function handleKey(e) { if(e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }
+    function setSuggestion(el) { const i = document.getElementById('promptInput'); i.value = el.textContent; switchPage('chat'); autoResize(i); i.focus(); }
+
+    function toggleAgent(i) {
+      const t = document.getElementById(`t${i}`); agentsState[i].active = !agentsState[i].active;
+      if(agentsState[i].active) { t.classList.add('bg-emerald-600'); t.classList.remove('bg-brandSurface2'); t.children[0].classList.add('translate-x-4'); } 
+      else { t.classList.remove('bg-emerald-600'); t.classList.add('bg-brandSurface2'); t.children[0].classList.remove('translate-x-4'); }
+      updateActiveCount(); saveAgents();
+    }
+    function updateActiveCount() {
+      let c = 0; if(agentsState[1].active) c++; if(agentsState[2].active) c++; if(agentsState[3].active) c++;
+      document.getElementById('activeCount').textContent = c;
+    }
+
+    function setMode(m, el) {
+      currentMode = m;
+      document.querySelectorAll('.mode-chip').forEach(c => {
+        c.classList.remove('active', 'bg-emerald-600', 'text-white', 'border-emerald-600');
+        c.classList.add('bg-brandSurface', 'text-zinc-400', 'border-brandBorder');
+      });
+      el.classList.add('active', 'bg-emerald-600', 'text-white', 'border-emerald-600');
+      el.classList.remove('bg-brandSurface', 'text-zinc-400', 'border-brandBorder');
+      
+      const freeSel = document.getElementById('freeAgentSelect');
+      if(m === 'free') freeSel.classList.remove('hidden');
+      else freeSel.classList.add('hidden');
+    }
+
+    function appendAgentCard(cont, id, name, plat, mod) {
+      const colors = { Gemini: '#3b82f6', Groq: '#f97316', OpenRouter: '#a855f7', Judge: '#10b981' };
+      const card = document.createElement('div');
+      card.className = "bg-brandSurface border border-brandBorder rounded-xl overflow-hidden shadow-sm fade-in";
+      card.innerHTML = `
+        <div class="px-3 py-2 border-b border-brandBorder bg-brandSidebar/50 flex items-center justify-between">
+          <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full" style="background:${colors[plat]}"></span><span class="font-semibold text-xs text-zinc-200">${name}</span></div>
+          <span class="text-[9px] px-1.5 py-0.5 rounded font-bold bg-amber-500/10 text-amber-500" id="status-${id}">Thinking</span>
+        </div>
+        <div class="p-3 text-xs text-zinc-300 rendered-content overflow-x-auto" id="body-${id}"><span class="typing-dots"><span></span><span></span><span></span></span></div>
+        <div class="px-3 py-1.5 bg-brandSidebar/30 border-t border-brandBorder hidden justify-end" id="foot-${id}">
+          <button class="text-[10px] text-zinc-500 hover:text-zinc-300" onclick="copyRawResponse('${id}')">📋 Copy</button>
+        </div>
+      `;
+      cont.appendChild(card); const chat = document.getElementById('chatMessages'); chat.scrollTop = chat.scrollHeight;
+    }
+
+    let loadedResponseCaches = {};
+
+    function updateCardSuccess(id, txt) {
+      loadedResponseCaches[id] = txt;
+      document.getElementById(`status-${id}`).className = "text-[9px] px-1.5 py-0.5 rounded font-bold bg-emerald-500/10 text-emerald-500";
+      document.getElementById(`status-${id}`).textContent = "Done";
+      const b = document.getElementById(`body-${id}`); b.innerHTML = marked.parse(txt);
+      if (window.renderMathInElement) window.renderMathInElement(b, { delimiters: [{left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false}]});
+      document.getElementById(`foot-${id}`).classList.remove('hidden'); document.getElementById(`foot-${id}`).classList.add('flex');
+    }
+
+    function updateCardError(id, err) {
+      document.getElementById(`status-${id}`).className = "text-[9px] px-1.5 py-0.5 rounded font-bold bg-red-500/10 text-red-500";
+      document.getElementById(`status-${id}`).textContent = "Error";
+      document.getElementById(`body-${id}`).innerHTML = `<span class="text-red-400 font-mono">Error: ${err}</span>`;
+    }
+
+    function copyRawResponse(id) { if(loadedResponseCaches[id]) secureCopyText(loadedResponseCaches[id]); }
+
+    // --- Core Communication & History ---
+    async function sendMessage() {
+      const inp = document.getElementById('promptInput'); const prompt = inp.value.trim();
+      if(!prompt) return; inp.value = ''; autoResize(inp); dismissKeyboard();
+      
+      const empty = document.getElementById('emptyState'); if(empty) empty.remove();
+      const chat = document.getElementById('chatMessages');
+      
+      const uBubble = document.createElement('div');
+      uBubble.className = "bg-brandSurface2 border border-brandBorder rounded-xl px-3 py-2 max-w-[85%] self-end ml-auto text-xs text-zinc-100 fade-in";
+      uBubble.textContent = prompt; chat.appendChild(uBubble);
+      
+      // Save user prompt to context array
+      currentChatContext.push({ role: 'user', content: prompt });
+      
+      const cont = document.createElement('div'); cont.className = "space-y-3 w-full pt-2"; chat.appendChild(cont);
+      const batch = Date.now(); 
+      
+      let ag = [];
+      if(currentMode === 'free') {
+        // Only run the manually selected Agent
+        const chosenVal = document.getElementById('freeAgentSelect').value;
+        const platforms = {1:'Gemini', 2:'Groq', 3:'OpenRouter'};
+        const models = {1:apiKeys.modelGem, 2:apiKeys.modelGroq, 3:apiKeys.modelOR};
+        if(!apiKeys[Object.keys(platforms)[chosenVal-1].toLowerCase() === 'openrouter' ? 'openrouter' : platforms[chosenVal].toLowerCase()]) {
+          showCustomModal("Error", `คุณยังไม่ได้ใส่ API Key สำหรับ Agent ${chosenVal}`);
+          currentChatContext.pop(); // Revert user message on error
+          return;
+        }
+        ag.push({ id: `afree-${batch}`, num: parseInt(chosenVal), name: `Agent ${chosenVal} (${platforms[chosenVal]})`, platform: platforms[chosenVal], model: models[chosenVal] });
+      } else {
+        if(agentsState[1].active) ag.push({ id: `a1-${batch}`, num: 1, name: 'Gemini', platform: 'Gemini', model: apiKeys.modelGem });
+        if(agentsState[2].active) ag.push({ id: `a2-${batch}`, num: 2, name: 'Groq', platform: 'Groq', model: apiKeys.modelGroq });
+        if(agentsState[3].active) ag.push({ id: `a3-${batch}`, num: 3, name: 'OpenRouter', platform: 'OpenRouter', model: apiKeys.modelOR });
+      }
+      
+      if(ag.length === 0) { showCustomModal("Alert", "กรุณาเปิด Agent อย่างน้อย 1 ตัวในหน้า Settings"); return; }
+
+      let ans = [];
+      if (currentMode === 'parallel' || currentMode === 'judge') {
+        const promises = ag.map(async (a) => {
+          appendAgentCard(cont, a.id, a.name, a.platform, a.model);
+          try { const res = await callAgentAPI(a.num, prompt, false); updateCardSuccess(a.id, res); ans.push({name:a.name, ans:res}); } 
+          catch (e) { updateCardError(a.id, e.message); }
+        });
+        await Promise.all(promises);
+        
+        // Parallel mode: We save only the FIRST successful agent's answer to the primary context to prevent chaos, 
+        // OR we don't save parallel responses to continuous context. Let's just save the combined response.
+        if(ans.length > 0) {
+          currentChatContext.push({ role: 'assistant', agentName: 'Parallel Group', content: ans.map(a => `[${a.name}]: ${a.ans}`).join('\n\n') });
+        }
+
+        if (currentMode === 'judge' && ans.length > 0) {
+          const jId = `j-${batch}`; appendAgentCard(cont, jId, 'Judge', 'Judge', apiKeys.judgeModelGem);
+          try {
+            const jPrompt = `คำถาม: "${prompt}"\n\n` + ans.map(a=>`[${a.name}]:\n${a.ans}\n`).join('\n');
+            const jRes = await callGeminiAPI(jPrompt, agentsState.judge.sysPrompt, apiKeys.judgeModelGem, false);
+            updateCardSuccess(jId, jRes);
+            currentChatContext.push({ role: 'assistant', agentName: 'Judge', content: jRes });
+          } catch(e) { updateCardError(jId, e.message); }
+        }
+      } else if (currentMode === 'chain') {
+        let curr = prompt;
+        for(let i=0; i<ag.length; i++) {
+          const a = ag[i]; appendAgentCard(cont, a.id, a.name, a.platform, a.model);
+          try {
+            if(i>0) curr = compressContext(curr);
+            const res = await callAgentAPI(a.num, curr, false); updateCardSuccess(a.id, res);
+            curr = `Original Prompt: "${prompt}"\nPrevious AI Context: ${res}`;
+            if(i === ag.length-1) currentChatContext.push({ role: 'assistant', agentName: a.name, content: res }); // Save only final chain
+          } catch(e) { updateCardError(a.id, e.message); break; }
+        }
+      } else if (currentMode === 'free') {
+        // Free Mode uses TRUE Continuous History
+        const a = ag[0];
+        appendAgentCard(cont, a.id, a.name, a.platform, a.model);
+        try {
+          const res = await callAgentAPI(a.num, prompt, true); 
+          updateCardSuccess(a.id, res);
+          currentChatContext.push({ role: 'assistant', agentName: a.name, content: res });
+        } catch(e) { updateCardError(a.id, e.message); }
+      }
+      
+      chatHistory.push({ id: batch, prompt, timestamp: new Date().toLocaleTimeString() });
+      localStorage.setItem('nexus_chat_history', JSON.stringify(chatHistory)); renderHistoryList();
+    }
+
+    // --- API Callers ---
+    function callAgentAPI(n, p, useHistory) {
+      // Merge Global Platform Context + Agent Specific Context
+      let sys = agentsState[n].sysPrompt;
+      if(n===1 && apiKeys.ctxGemini) sys = `[Global Instruction]: ${apiKeys.ctxGemini}\n\n[Agent Instruction]: ${sys}`;
+      if(n===2 && apiKeys.ctxGroq) sys = `[Global Instruction]: ${apiKeys.ctxGroq}\n\n[Agent Instruction]: ${sys}`;
+      if(n===3 && apiKeys.ctxOR) sys = `[Global Instruction]: ${apiKeys.ctxOR}\n\n[Agent Instruction]: ${sys}`;
+      
+      if(n===1) return callGeminiAPI(p, sys, apiKeys.modelGem, useHistory);
+      if(n===2) return callGroqAPI(p, sys, apiKeys.modelGroq, useHistory);
+      if(n===3) return callOpenRouterAPI(p, sys, apiKeys.modelOR, useHistory);
+    }
+
+    async function callGeminiAPI(p, s, m, useHistory) {
+      if(!apiKeys.gemini) throw new Error("No Gemini Key");
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${m||'gemini-2.5-flash'}:generateContent?key=${apiKeys.gemini}`;
+      
+      let contents = [];
+      if(useHistory && currentChatContext.length > 0) {
+        let lastRole = ''; let mergedText = '';
+        const pushMerged = () => { if(lastRole) contents.push({role: lastRole==='user'?'user':'model', parts:[{text:mergedText}]}); };
+        
+        currentChatContext.forEach(msg => {
+          // Exclude the very last user prompt because we'll append it later, wait actually the current user prompt is already inside currentChatContext!
+        });
+        
+        // Re-process to properly merge consecutive assistant roles (Gemini strictly requires user-model alternation)
+        const processHistory = [...currentChatContext]; 
+        // Remove the last prompt from processing because we will add it manually or it's already at the end.
+        // Actually, since `sendMessage` pushes `prompt` to `currentChatContext` *before* calling API:
+        processHistory.forEach(msg => {
+          let msgText = msg.role === 'assistant' ? `[${msg.agentName} said]: ${msg.content}\n` : `${msg.content}\n`;
+          let targetRole = msg.role === 'assistant' ? 'model' : 'user';
+          if(targetRole !== lastRole) { pushMerged(); lastRole = targetRole; mergedText = msgText; } 
+          else { mergedText += "\n" + msgText; }
+        });
+        pushMerged();
+      } else {
+        contents = [{parts:[{text: p}]}];
+      }
+
+      const payload = { contents: contents };
+      if(s) payload.systemInstruction = { parts: [{text: s}] };
+
+      const res = await requestAPI(url, {"Content-Type":"application/json"}, 'POST', JSON.stringify(payload));
+      const d = await res.json(); if(!res.ok) throw new Error(d.error?.message||"API Error");
+      return d.candidates?.[0]?.content?.parts?.[0]?.text || "No Data";
+    }
+
+    async function callGroqAPI(p, s, m, useHistory) {
+      if(!apiKeys.groq) throw new Error("No Groq Key");
+      const url = "https://api.groq.com/openai/v1/chat/completions";
+      
+      const msgs = []; if(s) msgs.push({role:"system",content:s}); 
+      
+      if(useHistory && currentChatContext.length > 0) {
+        currentChatContext.forEach(msg => {
+          if(msg.role === 'user') msgs.push({role:"user", content:msg.content});
+          else msgs.push({role:"assistant", content: `[${msg.agentName}]: ${msg.content}`});
+        });
+      } else {
+        msgs.push({role:"user", content:p});
+      }
+
+      const res = await requestAPI(url, {"Content-Type":"application/json", "Authorization":`Bearer ${apiKeys.groq}`}, 'POST', JSON.stringify({model:m||'llama-3.3-70b-versatile',messages:msgs}));
+      const d = await res.json(); if(!res.ok) throw new Error(d.error?.message||"API Error");
+      return d.choices?.[0]?.message?.content || "No Data";
+    }
+
+    async function callOpenRouterAPI(p, s, m, useHistory) {
+      if(!apiKeys.openrouter) throw new Error("No OpenRouter Key");
+      const url = "https://openrouter.ai/api/v1/chat/completions";
+      
+      const msgs = []; if(s) msgs.push({role:"system",content:s}); 
+      
+      if(useHistory && currentChatContext.length > 0) {
+        currentChatContext.forEach(msg => {
+          if(msg.role === 'user') msgs.push({role:"user", content:msg.content});
+          else msgs.push({role:"assistant", content: `[${msg.agentName}]: ${msg.content}`});
+        });
+      } else {
+        msgs.push({role:"user", content:p});
+      }
+
+      const res = await requestAPI(url, {"Content-Type":"application/json", "Authorization":`Bearer ${apiKeys.openrouter}`}, 'POST', JSON.stringify({model:m||'google/gemini-2.5-flash:free',messages:msgs}));
+      const d = await res.json(); if(!res.ok) throw new Error(d.error?.message||"API Error");
+      return d.choices?.[0]?.message?.content || "No Data";
+    }
+
+    function renderHistoryList() {
+      const c = document.getElementById('historyList'); if(!c) return;
+      if(!chatHistory.length) { c.innerHTML = `<div class="text-center py-6 text-xs text-zinc-600">No history</div>`; return; }
+      c.innerHTML = '';
+      [...chatHistory].reverse().forEach(i => {
+        const d = document.createElement('div');
+        d.className = 'flex items-center justify-between p-3 bg-brandSurface border border-brandBorder rounded-xl cursor-pointer';
+        d.innerHTML = `
+          <div class="flex-1 min-w-0 pr-3" onclick="loadHistoryToInput('${i.prompt.replace(/'/g, "\\'")}')">
+             <div class="text-xs font-semibold text-zinc-300 truncate">${escapeHtml(i.prompt)}</div>
+             <div class="text-[9px] text-zinc-500 mt-1">${i.timestamp}</div>
+          </div>
+          <button class="text-zinc-500 hover:text-red-500" onclick="deleteHistoryItem(${i.id}, event)">✕</button>
+        `;
+        c.appendChild(d);
+      });
+    }
+
+    function loadHistoryToInput(t) { const i = document.getElementById('promptInput'); i.value = t; switchPage('chat'); autoResize(i); }
+    function deleteHistoryItem(id, e) { e.stopPropagation(); chatHistory = chatHistory.filter(h=>h.id!==id); localStorage.setItem('nexus_chat_history', JSON.stringify(chatHistory)); renderHistoryList(); }
+    function triggerClearAllHistory() { showCustomModal("ยืนยัน", "ลบประวัติถาวรทั้งหมด?", 'confirm', (ok)=>{ if(ok) { chatHistory=[]; localStorage.removeItem('nexus_chat_history'); renderHistoryList(); } }); }
+    function escapeHtml(s) { return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;"); }
+  </script>
+
+</body></html>
